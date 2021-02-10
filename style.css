@@ -1,0 +1,74 @@
+body {
+    padding:0;
+    margin:0;
+}
+
+#canvas {
+    background-image: url('img/.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-blend-mode:color-burn;
+}
+
+#caption{
+    bottom:0;
+    right:0;
+    position: absolute;
+    font-size:1em;
+    font-family:'Courier New', Courier, monospace;
+    color:white;
+    margin:1em;
+}
+
+#container {
+    top:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    position:absolute; 
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photobanner {
+    top:0;
+    bottom:0;
+    white-space: nowrap;
+    animation: bannermove 10s linear infinite;
+  }
+
+ .photobanner:hover {    
+    animation-play-state: paused;
+  }
+#img1:hover #img2:hover #img3:hover #img4:hover #img5:hover #img6:hover #img7:hover #img8:hover {
+    mix-blend-mode:lighten;
+}
+  
+  .photobanner img {    
+    margin: 0 10em;
+    width:15%;
+  }
+
+  
+  @keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
+
+  .logo {
+      top:0;
+      left:0;
+      width:10em;
+      margin:0.5em;
+      position: absolute;
+  }
