@@ -77,9 +77,9 @@ window.addEventListener("load", () => {
         ctx.moveTo(e.clientX, e.clientY);
     }
 
-    function touchstart(event) { drawstart(event.touches[0]) }
-  function touchmove(event) { drawmove(event.touches[0]); event.preventDefault(); }
-  function touchend(event) { drawend(event.changedTouches[0]) }
+    function touchstart(e) { drawstart(e.touches[0]) }
+  function touchmove(e) { drawmove(e.touches[0]); e.preventDefault(); }
+  function touchend(e) { drawend(e.changedTouches[0]) }
 
     //EventListeners
     canvas.addEventListener("mousedown", startPosition);
