@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-//CAPTION
-
-
 //DRAW
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas");
@@ -97,4 +94,3 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 });
-

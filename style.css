@@ -21,7 +21,7 @@ body {
     font-size:1em;
     font-family:'Courier New', Courier, monospace;
     color:white;
-    margin:1em;
+    padding:1em;
 }
 
 #container {
@@ -69,6 +69,22 @@ body {
       top:0;
       left:0;
       width:10em;
-      margin:0.5em;
+      padding:0.5em;
       position: absolute;
+  }
+
+@media (orientation: portrait) {
+    .logo {
+        right:0;
+        margin:0 auto;
+        width:25vw;
+    }
+
+    #caption {
+        font-size:0.8em;
+        margin:auto;
+        left:0;
+        text-align:center;
+    }    
+
   }
