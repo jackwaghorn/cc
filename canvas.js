@@ -142,13 +142,11 @@ window.addEventListener('resize', () => {
             lastX=x;
 	    lastY=y;
         }
-        var gradient = ctx.createLinearGradient(0, 0, 170, 0);
-        gradient.addColorStop("0", "magenta");
-        gradient.addColorStop("0.5" ,"blue");
-        gradient.addColorStop("1.0", "red");
+
+ 
 
         // Select a fill style
-        ctx.strokeStyle = gradient;
+        ctx.strokeStyle = "white";
 
         // Set the line "cap" style to round, so lines at different angles can join into each other
         ctx.lineCap = "round";
