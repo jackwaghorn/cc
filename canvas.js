@@ -66,8 +66,6 @@ window.addEventListener("load", () => {
 
     function draw(e){
 
-
-        
         if (!painting) return;
         ctx.lineWidth = 10;
         ctx.lineCap = 'round';
@@ -78,6 +76,10 @@ window.addEventListener("load", () => {
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
     }
+
+    function touchstart(event) { drawstart(event.touches[0]) }
+  function touchmove(event) { drawmove(event.touches[0]); event.preventDefault(); }
+  function touchend(event) { drawend(event.changedTouches[0]) }
 
     //EventListeners
     canvas.addEventListener("mousedown", startPosition);
