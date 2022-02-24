@@ -6,7 +6,7 @@ let secondIndex = null;
 
 let textSize = 50;
 
-let newRatio = 2
+let newRatio = 2;
 
 if (window.innerWidth < 1150) {
   textSize = 35;
@@ -41,14 +41,12 @@ let propertiesCC = {
   size: textSize,
   fill: "#101010",
   weight: "700",
-
 };
 let propertiesE = {
   family: "'Arial', sans-serif",
   size: textSize,
   fill: "white",
   weight: "700",
-
 };
 
 // Council Complaints
@@ -67,10 +65,8 @@ material.uniforms.uRotation.value = 64;
 
 var blotter = new Blotter(material, {
   texts: [cc, events, se],
-  ratio:newRatio
+  ratio: newRatio,
 });
-
-console.log(blotter)
 
 var elem = document.getElementById("cc-text");
 var scope = blotter.forText(cc);
@@ -258,14 +254,45 @@ function showInfo() {
     window.setTimeout(function () {
       document.getElementById("info").style.transform = "scale(0)";
     }, 300);
-
+    document.getElementById("icon").classList.remove('invert')
     document.getElementById("info").style.opacity = "0";
     document.getElementById("info-container").style.transform =
       "translateY(100vh)";
   } else {
     clearInterval(timer);
+    document.getElementById("icon").classList.add('invert')
     document.getElementById("info").style.transform = "scale(1)";
     document.getElementById("info").style.opacity = "1";
     document.getElementById("info-container").style.transform = "translateY(0)";
   }
 }
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const d = new Date();
+let month = months[d.getMonth()];
+
+let day = d.getDate();
+
+let year = d.getFullYear();
+function letterDate() {
+  const newP = document.createElement("p");
+  newP.innerText = `${day} ${month}, ${year}`;
+  newP.classList.add("m-0", "text-end");
+  document.getElementById("date").appendChild(newP);
+}
+
+letterDate();

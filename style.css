@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Space Mono', monospace;
+
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -20,13 +23,17 @@ body {
   background: "#FBFBFB";
 }
 
+.invert {
+  filter: invert(100%)!important;
+}
+
 #app:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .dividing-line {
   border-bottom: 1px dashed black;
-  width:100%;
+  width: 100%;
 }
 
 .my-contain {
@@ -57,7 +64,8 @@ body {
 }
 
 .logo-extended {
-  width: 250px;
+  width: 220px;
+  margin: 1em 0 1em 0;
 }
 .contain {
   position: fixed;
