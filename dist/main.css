@@ -23,6 +23,7 @@ body
     top: 0;
     left: 0;
     outline: none;
+    user-select: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,19 +46,32 @@ body
     padding:0.2em;
 
 }
-marquee {
-    bottom:0;
-    width:100%;
-    font-family: 'Institut';
-    user-select: none;
-    background:black;
-    padding:0.2em;
 
-    color:#ffffff;
+.marquee {
+    bottom:0;
     position:fixed;
     z-index:10;
+    padding:0.2em;
+    font-family: 'Institut';
+    user-select: none;
+    width:100%;
+    background:black;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
     font-size: 1.6em;
     border-top:2px solid white;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }
 
 
